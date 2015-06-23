@@ -1,0 +1,32 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\screen.cs">
+    <Files>
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\playButton.cs" Line="61" Column="3" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\RegSystem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\LogIn.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\ChangeScene.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\SignUP.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\NoReg.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\dummy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\LoadSave.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\testSaveLoad.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Main.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\HighScore.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\SClip.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Item.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Instantiating.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Connection.cs" Line="1" Column="1" />
+      <File FileName="..\New Unity Project\Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Player.cs" Line="46" Column="48" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\ManageCamera.cs" Line="25" Column="5" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Ink.cs" Line="7" Column="12" />
+      <File FileName="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\screen.cs" Line="71" Column="91" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
