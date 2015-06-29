@@ -4,7 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 	
 	private Vector3 position;
-	private bool death , newP = true;
+	private bool death ;
 	private HighScore points;
 	private Lives life;
 	public GameObject gameOver;
@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 	public AudioClip charClip;
 	public AudioClip losClip;
 	public AudioSource source;
-	private int sScore , ID;
+	private int  sScore ,ID;
 
 	
 	TrailRenderer trail;
@@ -104,7 +104,7 @@ public class Player : MonoBehaviour {
 	void LoadLevel()
 	{
 		print("in LoadLevel");
-		Application.LoadLevel ("Main Menu");
+		Application.LoadLevel ("Again");
 	}
 
 

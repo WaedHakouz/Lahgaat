@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Database1 : MonoBehaviour 
 {
-	public static string user = "", country = "" , name="";
+	public static string user = "", country = "";
 	private string password = "", rePass = "", message = "";
 	public int ID;
-	private bool register = false , newP = true , prev=false, regAction=false, loginAction = false;
+	private bool  regAction=false, loginAction = false;
 
 
 	private void OnGUI()

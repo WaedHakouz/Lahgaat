@@ -20,9 +20,9 @@ public class Item : MonoBehaviour {
 
 	public float minY;
 	public float maxY;
-
-	private float rotDirection = 50;
+	
 	private string currentDialect;
+	private int currentID;
 	//private GameObject access;
 
 
@@ -59,7 +59,7 @@ public class Item : MonoBehaviour {
 	}
 
 	public void  OnMouseDown ( ) {
-		//print (" ITEM : " + gameObject.tag);
+		print (" ITEM : " + gameObject.tag);
 
 		GameObject tempItem = null;
 		
@@ -70,14 +70,34 @@ public class Item : MonoBehaviour {
 
 
 		currentDialect = instanObject.GetComponent<playButton> ().getDialect();
+		currentID = instanObject.GetComponent <playButton>().getID ();
+		WWWForm form = new WWWForm ();
+		form.AddField ("Action","setDialect");
+		form.AddField ("ID", currentID);
+		form.AddField ("Dialect", gameObject.tag);
+		WWW w = new WWW ("localhost/URL.php", form);
+		StartCoroutine (setDialectFunc (w));
 
-		if (currentDialect == gameObject.tag) {
+		if (currentDialect == "NOR" || currentDialect == "LAV" || currentDialect == "EGY" || currentDialect == "GLF"  ) {
+
+
+
+			if (currentDialect == gameObject.tag) {
+				player.selected1 ();
+				Destroy (gameObject);
+
+			} else {
+				player.selected2 ();
+				Destroy (gameObject);
+			}
+
+		} 
+
+		else {
+
 			player.selected1 ();
 			Destroy (gameObject);
 
-		} else {
-			player.selected2 ();
-			Destroy (gameObject);
 		}
 		instanObject.GetComponent<playButton> ().skip();
 
@@ -128,4 +148,19 @@ public class Item : MonoBehaviour {
 
 		//Destroy (gameObject);
 	}*/
+
+
+	IEnumerator setDialectFunc(WWW w)
+	{
+		yield return w;
+		if (w.error == null)
+		{
+			print ( w.text);
+		}
+		else
+		{
+			print ("Error Occurred : " + w.error );
+
+		}
+	}
 }

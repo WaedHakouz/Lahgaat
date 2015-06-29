@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{E53CE715-B6EF-2254-7FD2-BB0CF091AF02}</ProjectGuid>
+	<ProjectGuid>{669B63FB-B77A-87DA-75D0-89D560621EB1}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,13 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\AgainScreen.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\ChangeScene.cs" />
-     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Connection.cs" />
-     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Database.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Database1.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\GameScreen.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\HighScore.cs" />
-     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Ink.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Instantiating.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Item.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Lives.cs" />
@@ -60,22 +59,18 @@
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\LogIn.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Main.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\ManageCamera.cs" />
-     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\MusicRandomizer.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\NoReg.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Player.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\RegSystem.cs" />
+     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\RulesScreen.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\SClip.cs" />
-     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\ScoresTest.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\SignUP.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\Skip.cs" />
-     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\WaitForSecondsExample.cs" />
-     <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\dummy.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\play.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\playButton.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\playtest.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\screen.cs" />
      <Compile Include="Assets\Fruit Ninja 2D Easy Maker Kit\Scripts\testSaveLoad.cs" />
-     <Compile Include="Assets\myScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

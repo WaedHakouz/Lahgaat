@@ -23,6 +23,7 @@ public class Instantiating: MonoBehaviour {
 	{ 
 		minX = ManageCamera.MinX();
 		maxX = ManageCamera.MaxX(); 
+
 		StartCoroutine ("Instantiator"); //used to call the Instantiator function as soon as the code is executed
 		player = mplayer.GetComponent<Player>();
 
@@ -31,7 +32,10 @@ public class Instantiating: MonoBehaviour {
 	
 	// Update is called once per frame 
 	void Update () { 
-		
+
+		minX = ManageCamera.MinX();
+		maxX = ManageCamera.MaxX(); 
+
 	} 
 
 	bool RandomItem () // fucntion returns true/false to know if there are items in the array
@@ -51,6 +55,7 @@ public class Instantiating: MonoBehaviour {
 
 		if (RandomItem ()) 
 		{ 
+
 			// the function Instantiate is used to clone an item and place it somewhere
 			Item = Instantiate (Items [index], new Vector2 (Random.Range (minX, maxX), transform.position.y) 
 			       , Quaternion.Euler (0,0, Random.Range (-60, 60))) as GameObject; 
@@ -86,11 +91,11 @@ public class Instantiating: MonoBehaviour {
 
 			if (Item.transform.position.x> 0) 
 			{ 
-				Item.GetComponent<Rigidbody2D>().AddForce (new Vector2 (-leftForce, upForce)); 
+				Item.GetComponent<Rigidbody2D>().AddForce (new Vector2 (leftForce, upForce)); 
 			} 
 			else 
 			{ 
-				Item.GetComponent<Rigidbody2D>().AddForce (new Vector2 (leftForce, upForce)); 
+				Item.GetComponent<Rigidbody2D>().AddForce (new Vector2 (-leftForce, upForce)); 
 			} 
 			StartCoroutine ("Instantiator"); 
 		} 

@@ -7,7 +7,7 @@ public class NoReg : MonoBehaviour {
 		
 		
 		public static string user = "" , country="";
-		private string password = "",  rePass = "", message = "";
+		private string password = "" , message = "";
 		public int ID;
 		
 		

@@ -6,7 +6,7 @@ public class RegSystem : MonoBehaviour
 	public static string user = "", country = "" , name="";
 	private string password = "", rePass = "", message = "";
 	public int ID;
-	private bool register = false , newP = true , prev=false, regAction=false, loginAction = false;
+	private bool  regAction=false, loginAction = false;
 
 
 	

@@ -10,10 +10,11 @@ public class playButton : MonoBehaviour {
 	public AudioSource source;
 	public AudioSource source1;
 	public AudioClip ding;
-	private Queue clips = new Queue() , dialects = new Queue();
+	private Queue clips = new Queue() , dialects = new Queue() , IDs = new Queue();
 	public GameObject skipB;
 	public SClip[] allClips = new SClip[8];
-	public string currentDialect;
+	public string currentDialect ;
+	public int currentID;
 	//private  www;
 
 	void Start() {
@@ -26,7 +27,7 @@ public class playButton : MonoBehaviour {
 	void Update () 
 	{
 
-	
+		print (clips.Count);
 
 		if (!source.isPlaying && clips.Count > 0 && !source1.isPlaying)
 		{
@@ -43,12 +44,13 @@ public class playButton : MonoBehaviour {
 
 			source.clip = (AudioClip)clips.Dequeue ();
 			currentDialect = (string) dialects.Dequeue();
+			currentID = (int)IDs.Dequeue();
 			source.Play ();
 			print ("Clip Dialect : "+currentDialect);
-
+			print ("Clip ID : "+currentID);
 		}
 
-		if (clips.Count == 1)
+		if (clips.Count == 2)
 			getURLs ();
 
 		//playClips ();
@@ -103,7 +105,7 @@ public class playButton : MonoBehaviour {
 	}
 
 
-	public IEnumerator clipLoaded (WWW www , string dia)
+	public IEnumerator clipLoaded (WWW www , string dia , int id)
 	{	//print ("first");
 		yield return www;
 		//print ("first2");
@@ -111,6 +113,7 @@ public class playButton : MonoBehaviour {
 		if (www.error == null) {
 			clips.Enqueue (www.GetAudioClip (false, true));
 			dialects.Enqueue( dia);
+			IDs.Enqueue(id);
 
 		} 
 
@@ -144,10 +147,13 @@ public class playButton : MonoBehaviour {
 	{
 		source.clip = (AudioClip)clips.Dequeue ();
 		currentDialect = (string) dialects.Dequeue ();
+		currentID = (int)IDs.Dequeue ();
 		source1.clip=ding;
 		source1.Play();
 		Thread.Sleep(600);
 		source.Play ();
+		print ("Clip Dialect : "+currentDialect);
+		print ("Clip ID : "+currentID);
 
 
 	}
@@ -182,7 +188,7 @@ public class playButton : MonoBehaviour {
 				}
 
 				WWW www = new WWW (allClips[i].URL);
-				StartCoroutine (clipLoaded (www , allClips[i].Dialect));
+				StartCoroutine (clipLoaded (www , allClips[i].Dialect , allClips[i].ID));
 
 			
 
@@ -206,6 +212,12 @@ public class playButton : MonoBehaviour {
 	public string getDialect()
 	{
 		return currentDialect;
+	}
+
+
+	public int getID()
+	{
+		return currentID;
 	}
 
 	 IEnumerator Example(int i) {

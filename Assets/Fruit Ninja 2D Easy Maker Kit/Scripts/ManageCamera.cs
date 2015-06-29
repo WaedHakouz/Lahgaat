@@ -21,8 +21,6 @@ public class ManageCamera : MonoBehaviour {
 		minY = camera.ScreenToWorldPoint (new Vector3 (0, 0, distanceZ)).y;
 		maxY = camera.ScreenToWorldPoint (new Vector3 (Screen.height, distanceZ)).y;
 
-		//print (maxX.ToString ());
-		//print (maxY.ToString ());
 
 	}
 
