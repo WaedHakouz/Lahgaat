@@ -26,7 +26,7 @@ public class NoReg : MonoBehaviour {
 			form.AddField ("user", user);
 			form.AddField ("country", country);
 			form.AddField ("password", password);
-			WWW w = new WWW ("localhost/noReg.php", form);
+			WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/noReg.php", form);
 			StartCoroutine (registerFunc (w));
 			
 			

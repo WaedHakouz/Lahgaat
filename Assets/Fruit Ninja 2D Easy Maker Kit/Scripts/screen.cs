@@ -27,7 +27,7 @@ public class screen : MonoBehaviour {
 			buttons [0].transform.localScale = new Vector3 (0.5F, 0.5F, 0);
 			buttons [1].transform.localScale = new Vector3 (0.5F, 0.5F, 0);
 			buttons [2].transform.localScale = new Vector3 (0.5F, 0.5F, 0);
-			buttons [0].transform.position = new Vector3 (148.0F, 120F, 0.0F);
+			buttons [0].transform.position = new Vector3 (300.0F, 120F, 0.0F);
 			buttons [1].transform.position = new Vector3 (148.0F, 175F, 0.0F);
 			buttons [2].transform.position = new Vector3 (148.0F, 230F, 0.0F);
 
@@ -77,9 +77,9 @@ public class screen : MonoBehaviour {
 			buttons [0].transform.localScale = new Vector3 (0.5F, 0.5F, 0);
 			buttons [1].transform.localScale = new Vector3 (0.5F, 0.5F, 0);
 			buttons [2].transform.localScale = new Vector3 (0.5F, 0.5F, 0);
-			buttons [0].transform.position = new Vector3 (210.0F, 120F, 0.0F);
-			buttons [1].transform.position = new Vector3 (210.0F, 175F, 0.0F);
-			buttons [2].transform.position = new Vector3 (210.0F, 235F, 0.0F);
+			buttons [0].transform.position = new Vector3 (260.0F, 160F, 0.0F);
+			buttons [1].transform.position = new Vector3 (260.0F, 225F, 0.0F);
+			buttons [2].transform.position = new Vector3 (260.0F, 295F, 0.0F);
 			
 			//for (int x=0 ; x<buttons.Length ; x++)
 			
@@ -106,9 +106,9 @@ public class screen : MonoBehaviour {
 			buttons [0].transform.localScale = new Vector3 (0.6F, 0.6F, 0);
 			buttons [1].transform.localScale = new Vector3 (0.6F, 0.6F, 0);
 			buttons [2].transform.localScale = new Vector3 (0.6F, 0.6F, 0);
-			buttons [0].transform.position = new Vector3 (650.0F, 220F, 0.0F);
-			buttons [1].transform.position = new Vector3 (650.0F, 310F, 0.0F);
-			buttons [2].transform.position = new Vector3 (650.0F, 400F, 0.0F);
+			buttons [0].transform.position = new Vector3 (830.0F, 300F, 0.0F);
+			buttons [1].transform.position = new Vector3 (830.0F, 390F, 0.0F);
+			buttons [2].transform.position = new Vector3 (830.0F, 480F, 0.0F);
 			
 			
 			

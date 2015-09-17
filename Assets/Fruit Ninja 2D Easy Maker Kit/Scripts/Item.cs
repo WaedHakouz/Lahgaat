@@ -75,7 +75,7 @@ public class Item : MonoBehaviour {
 		form.AddField ("Action","setDialect");
 		form.AddField ("ID", currentID);
 		form.AddField ("Dialect", gameObject.tag);
-		WWW w = new WWW ("localhost/URL.php", form);
+		WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/URL.php", form);
 		StartCoroutine (setDialectFunc (w));
 
 		if (currentDialect == "NOR" || currentDialect == "LAV" || currentDialect == "EGY" || currentDialect == "GLF"  ) {

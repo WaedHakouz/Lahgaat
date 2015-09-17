@@ -16,7 +16,7 @@ public class HighScore : MonoBehaviour {
 		WWWForm form = new WWWForm ();
 		form.AddField ("Action","getScore");
 		form.AddField ("ID", LoadSave.ID);
-		WWW w = new WWW ("localhost/score.php", form);
+		WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/score.php", form);
 		StartCoroutine (scoreFunc (w));
 
 		textPoints.GetComponent<GUIText> ().text =getRecord ().ToString();
@@ -42,7 +42,7 @@ public class HighScore : MonoBehaviour {
 			form.AddField ("Action","updateScore");
 			form.AddField ("ID", LoadSave.ID);
 			form.AddField ("SCORE", record );
-			WWW w = new WWW ("localhost/score.php", form);
+			WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/score.php", form);
 			StartCoroutine (scoreFunc (w));
 		}
 		//if (textPoints != null) 

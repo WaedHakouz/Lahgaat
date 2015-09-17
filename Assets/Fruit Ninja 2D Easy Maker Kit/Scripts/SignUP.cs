@@ -56,7 +56,7 @@ public class SignUP : MonoBehaviour {
 						form.AddField ("user", user);
 						form.AddField ("country", country);
 						form.AddField ("password", password);
-						WWW w = new WWW ("localhost/register.php", form);
+						WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/register.php", form);
 						StartCoroutine (registerFunc (w));
 
 					} else

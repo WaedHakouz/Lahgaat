@@ -86,7 +86,7 @@ public class GameScreen : MonoBehaviour {
 			GameObject.FindGameObjectWithTag ("Points").GetComponent<GUIText>().fontSize=50;
 			GameObject.FindGameObjectWithTag ("Points").transform.position = new Vector3 (0.05F , 0.04F, 0);
 			GameObject.FindGameObjectWithTag ("Lives").transform.localScale = new Vector3 (0.05F , 0.05F, 0);
-			GameObject.FindGameObjectWithTag ("Lives").transform.position = new Vector3 (0.95F , 0.07F, 0);
+			GameObject.FindGameObjectWithTag ("Lives").transform.position = new Vector3 (0.85F , 0.07F, 0);
 			obs=GameObject.FindGameObjectWithTag ("Bombs").GetComponent<Instantiating>().Items;
 			for (int x=0; x<obs.Length ; x++)
 			{
@@ -109,7 +109,7 @@ public class GameScreen : MonoBehaviour {
 		else {
 
 			GameObject.FindGameObjectWithTag ("Skip").transform.localScale = new Vector3 (0.9F , 0.9F, 0);
-			GameObject.FindGameObjectWithTag ("Skip").transform.position = new Vector3 (13F, 3F, 0);
+			GameObject.FindGameObjectWithTag ("Skip").transform.position = new Vector3 (8.8F, 2.5F, 0);
 			GameObject.FindGameObjectWithTag ("bottom").transform.localScale = new Vector3 (1F , 1.2F, 0);
 			GameObject.FindGameObjectWithTag ("bottom").transform.position = new Vector3 (3.5F, 1.9F, 0);
 			GameObject.FindGameObjectWithTag ("Score").transform.localScale = new Vector3 (1F ,1F, 0 );
@@ -119,7 +119,7 @@ public class GameScreen : MonoBehaviour {
 			GameObject.FindGameObjectWithTag ("Points").GetComponent<GUIText>().fontSize=50;
 			GameObject.FindGameObjectWithTag ("Points").transform.position = new Vector3 (0.04F , 0.04F, 0);
 			GameObject.FindGameObjectWithTag ("Lives").transform.localScale = new Vector3 (0.05F , 0.05F, 0);
-			GameObject.FindGameObjectWithTag ("Lives").transform.position = new Vector3 (0.95F , 0.07F, 0);
+			GameObject.FindGameObjectWithTag ("Lives").transform.position = new Vector3 (0.85F , 0.04F, 0);
 			obs=GameObject.FindGameObjectWithTag ("Bombs").GetComponent<Instantiating>().Items;
 			for (int x=0; x<obs.Length ; x++)
 			{

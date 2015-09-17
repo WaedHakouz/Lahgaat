@@ -38,7 +38,7 @@ public class LogIn : MonoBehaviour {
 				WWWForm form = new WWWForm ();
 				form.AddField ("user", user);
 				form.AddField ("password", password);
-				WWW w = new WWW ("localhost/login.php", form);
+				WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/login.php", form);
 				StartCoroutine (login (w));	
 				
 

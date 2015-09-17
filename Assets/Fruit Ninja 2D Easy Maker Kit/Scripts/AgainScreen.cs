@@ -74,11 +74,11 @@ public class AgainScreen : MonoBehaviour {
 			
 			button[1].transform.localScale = new Vector3 (1F, 1F, 0);
 			
-			button[1].transform.position = new Vector3 (215.0F, 220F, 0.0F);
+			button[1].transform.position = new Vector3 (265.0F, 270F, 0.0F);
 
 			button[0].transform.localScale = new Vector3 (1F, 1F, 0);
 			
-			button[0].transform.position = new Vector3 (215.0F, 125F, 0.0F);
+			button[0].transform.position = new Vector3 (265.0F, 175F, 0.0F);
 
 
 		} 
@@ -95,10 +95,10 @@ public class AgainScreen : MonoBehaviour {
 			
 			
 			button[1].transform.localScale = new Vector3 (0.8F, 0.8F, 0);
-			button[1].transform.position = new Vector3 (650.0F, 380F, 0.0F);
+			button[1].transform.position = new Vector3 (830.0F, 460F, 0.0F);
 
 			button[0].transform.localScale = new Vector3 (0.8F, 0.8F, 0);
-			button[0].transform.position = new Vector3 (650.0F, 260F, 0.0F);
+			button[0].transform.position = new Vector3 (830.0F, 340F, 0.0F);
 
 		}
 		

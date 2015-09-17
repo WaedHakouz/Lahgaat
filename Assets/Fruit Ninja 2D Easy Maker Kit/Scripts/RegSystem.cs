@@ -49,7 +49,7 @@ public class RegSystem : MonoBehaviour
 						form.AddField ("user", user);
 						form.AddField ("country", country);
 						form.AddField ("password", password);
-						WWW w = new WWW ("localhost/register.php", form);
+						WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/register.php", form);
 						StartCoroutine (registerFunc (w));
 					} else
 						message += "Your Password does not match \n";
@@ -79,7 +79,7 @@ public class RegSystem : MonoBehaviour
 					WWWForm form = new WWWForm ();
 					form.AddField ("user", user);
 					form.AddField ("password", password);
-					WWW w = new WWW ("localhost/login.php", form);
+					WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/login.php", form);
 					StartCoroutine (login (w));
 					
 				}
@@ -136,7 +136,7 @@ public class RegSystem : MonoBehaviour
 							form.AddField ("user", user);
 							form.AddField ("country", country);
 							form.AddField ("password", password);
-							WWW w = new WWW ("localhost/register.php", form);
+							WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/register.php", form);
 							StartCoroutine (registerFunc (w));
 						} else
 							message += "Your Password does not match \n";
@@ -168,7 +168,7 @@ public class RegSystem : MonoBehaviour
 						WWWForm form = new WWWForm ();
 						form.AddField ("user", user);
 						form.AddField ("password", password);
-						WWW w = new WWW ("localhost/login.php", form);
+						WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/login.php", form);
 						StartCoroutine (login (w));
 						newP = false;
 				
@@ -189,7 +189,7 @@ public class RegSystem : MonoBehaviour
 				form.AddField ("user", "");
 				form.AddField ("country", "");
 				form.AddField ("password", "");
-				WWW w = new WWW ("localhost/register.php", form);
+				WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/register.php", form);
 				StartCoroutine (registerFunc (w));
 				newP=false;
 				

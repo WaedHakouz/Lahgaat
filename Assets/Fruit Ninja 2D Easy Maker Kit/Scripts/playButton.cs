@@ -10,7 +10,8 @@ public class playButton : MonoBehaviour {
 	public AudioSource source;
 	public AudioSource source1;
 	public AudioClip ding;
-	private Queue clips = new Queue() , dialects = new Queue() , IDs = new Queue();
+	private Queue loadedClips = new Queue() , dialects = new Queue() , IDs = new Queue();
+	private Queue unloadedClips = new Queue ();
 	public GameObject skipB;
 	public SClip[] allClips = new SClip[8];
 	public string currentDialect ;
@@ -27,9 +28,9 @@ public class playButton : MonoBehaviour {
 	void Update () 
 	{
 
-		print (clips.Count);
+		print (loadedClips.Count);
 
-		if (!source.isPlaying && clips.Count > 0 && !source1.isPlaying)
+		if (!source.isPlaying && loadedClips.Count > 0 && !source1.isPlaying)
 		{
 			source1.clip=ding;
 			source1.Play();
@@ -38,19 +39,19 @@ public class playButton : MonoBehaviour {
 
 
 
-		if (!source.isPlaying && clips.Count > 0)
+		if (!source.isPlaying && loadedClips.Count > 0)
 		{
-			Thread.Sleep(600);
+//			Thread.Sleep(600);
 
-			source.clip = (AudioClip)clips.Dequeue ();
+			source.clip = (AudioClip)loadedClips.Dequeue ();
 			currentDialect = (string) dialects.Dequeue();
 			currentID = (int)IDs.Dequeue();
 			source.Play ();
-			print ("Clip Dialect : "+currentDialect);
+			print ("Clip Dialect : " + currentDialect);
 			print ("Clip ID : "+currentID);
 		}
 
-		if (clips.Count == 2)
+		if (loadedClips.Count == 2)
 			getURLs ();
 
 		//playClips ();
@@ -97,7 +98,7 @@ public class playButton : MonoBehaviour {
 
 		WWWForm form = new WWWForm ();
 		form.AddField ("Action","getURLs");
-		WWW w = new WWW ("localhost/URL.php", form);
+		WWW w = new WWW ("http://qatsdemo.cloudapp.net/lahajet/phpScripts/URL.php", form);
 		StartCoroutine (scoreFunc (w));
 	
 
@@ -111,9 +112,10 @@ public class playButton : MonoBehaviour {
 		//print ("first2");
 
 		if (www.error == null) {
-			clips.Enqueue (www.GetAudioClip (false, true));
+			loadedClips.Enqueue (www.GetAudioClip (false, true));
 			dialects.Enqueue( dia);
 			IDs.Enqueue(id);
+
 
 		} 
 
@@ -122,8 +124,10 @@ public class playButton : MonoBehaviour {
 			print("Error " + www.error);
 		}
 
-			
-
+		SClip currentClip = (SClip)unloadedClips.Dequeue();
+		WWW newWww = new WWW (currentClip.URL);
+		StartCoroutine (clipLoaded (newWww , currentClip.Dialect , currentClip.ID));	
+		
 
 
 		/*if (clips.Count > 0 ) {
@@ -145,17 +149,19 @@ public class playButton : MonoBehaviour {
 
 	public void skip()
 	{
-		source.clip = (AudioClip)clips.Dequeue ();
-		currentDialect = (string) dialects.Dequeue ();
-		currentID = (int)IDs.Dequeue ();
-		source1.clip=ding;
-		source1.Play();
-		Thread.Sleep(600);
-		source.Play ();
-		print ("Clip Dialect : "+currentDialect);
-		print ("Clip ID : "+currentID);
+		print ("Queue count = " + loadedClips.Count);
+		if (loadedClips.Count > 0) {
 
-
+			source.clip = (AudioClip)loadedClips.Dequeue ();
+			currentDialect = (string) dialects.Dequeue ();
+			currentID = (int)IDs.Dequeue ();
+			source1.clip=ding;
+			source1.Play();
+			//		Thread.Sleep(600);
+			source.Play ();
+			print ("Clip Dialect : "+currentDialect);
+			print ("Clip ID : "+currentID);
+		}
 	}
 
 
@@ -182,23 +188,13 @@ public class playButton : MonoBehaviour {
 			}
 
 			for (int i=0; i<allClips.Length; i++) {
-				if ( i==3 )
-				{	
-					Thread.Sleep(600);
-				}
 
-				WWW www = new WWW (allClips[i].URL);
-				StartCoroutine (clipLoaded (www , allClips[i].Dialect , allClips[i].ID));
-
-			
-
-								
-
-					
-	
-
+				unloadedClips.Enqueue(allClips[i]);
 			}
-			
+
+			SClip currentClip = (SClip)unloadedClips.Dequeue();
+			WWW www = new WWW (currentClip.URL);
+			StartCoroutine (clipLoaded (www , currentClip.Dialect , currentClip.ID));
 		}
 		else
 		{
